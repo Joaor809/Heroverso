@@ -1,0 +1,24 @@
+.logo-navbar {
+    height: 56px;
+    width: auto;
+}
+nav{
+    background-color: #0b0f19;
+}
+.navbar-toggler{
+    color: white;
+}
+@font-face {
+    font-family: 'marvel';
+    src: url('../fonts/AVENGEANCE\ HEROIC\ AVENGER.ttf') format('ttf');
+}
+#card{
+    transition: transform 0.5s, box-shadow 0.5s !important;
+}
+#card:hover{
+    transform: scale(1.1) !important;
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2) !important;
+}
+.quadrinhos-cinema{
+    background: linear-gradient(90deg, #ED1D24, #005BAC) !important;
+}

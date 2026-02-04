@@ -1,0 +1,15 @@
+# Arquivos temporários
+*.log
+
+# Pastas de dependências
+node_modules/
+
+# Configurações do editor
+.vscode/
+.idea/
+
+# Arquivos sensíveis
+.env
+
+# Cache
+.cache/
