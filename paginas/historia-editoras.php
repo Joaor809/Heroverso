@@ -72,18 +72,52 @@ if (!$editora) {
         .nome {
             font-family: 'marvel';
         }
-        .filmes{
+
+        .filmes {
             width: 22rem;
             border-radius: 15px;
         }
-        .autores{
-            height: 27rem;
-            justify-content: center;
-            text-align: center;
-        }
-        #historia p{
+
+        #historia p {
             justify-content: center;
             text-align: justify;
+        }
+        @media(max-width: 768px){
+            
+            .filmes{
+                width: 100px;
+            }
+            .card-filmes{
+                width: 70%;
+            }
+            .card-filmes h3{
+                font-size: medium;
+            }
+            .autores{
+                width: 15rem;
+                justify-content: center;
+            }
+            .secao-autores .col{
+                display: flex;
+                justify-content: center;
+            }
+            .card-autores{
+                width: 70%;
+            }
+        }
+        @media(max-width: 1024px){
+            .card-filmes{
+                width: 70%;
+            }
+            #introducao p{
+                font-size: larger;
+            }
+            #historia p{
+                font-size: larger;
+            }
+            .frase{
+               font-size: larger; 
+            }
         }
     </style>
 </head>
@@ -118,7 +152,7 @@ if (!$editora) {
             <div class="card glass p-4" style="width: 26rem;">
                 <img src="<?= $editora['logo'] ?>" class="img-fluid mb-3">
                 <h1 class="nome"><?= $editora['nome'] ?></h1>
-                <p><?= $editora['frase'] ?></p>
+                <p class="frase"><?= $editora['frase'] ?></p>
             </div>
         </div>
     </header>
@@ -142,53 +176,61 @@ if (!$editora) {
                     <h3>História</h3>
                 </div>
                 <div class="card-body">
-                    <p ><?= $editora['historia'] ?></p>
+                    <p><?= $editora['historia'] ?></p>
                 </div>
             </div>
         </section>
 
-        <section class="d-flex justify-content-center my-4">
-            <div class="card glass w-80 container-custom">
+        <section class="secao-autores d-flex justify-content-center my-4">
+            <div class="card card-autores glass container-custom">
+
                 <div class="card-header text-center">
                     <h3>Autores Marcantes</h3>
                 </div>
+
                 <div class="card-body">
-                    <div class="row">
-                        <div class="col-auto">
-                            <div class="card autores" style="width: 18rem;">
-                                <img src="<?= $editora['imagens_autor1'] ?>" alt="">
-                                <div class="card-body">
+                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+                        <div class="col">
+                            <div class="card autores">
+                                <img src="<?= $editora['imagens_autor1'] ?>" class="card-img-top">
+                                <div class="card-body text-center">
                                     <h4><?= $editora['autor_1'] ?></h4>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-auto">
-                            <div class="card autores" style="width: 18rem;">
-                                <img src="<?= $editora['imagens_autor2'] ?>" alt="">
-                                <div class="card-body">
+
+                        <div class="col">
+                            <div class="card autores">
+                                <img src="<?= $editora['imagens_autor2'] ?>" class="card-img-top">
+                                <div class="card-body text-center">
                                     <h4><?= $editora['autor_2'] ?></h4>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-auto">
-                            <div class="card autores" style="width: 18rem;">
-                                <img src="<?= $editora['imagens_autor3'] ?>" alt="">
-                                <div class="card-body">
+
+                        <div class="col">
+                            <div class="card autores">
+                                <img src="<?= $editora['imagens_autor3'] ?>" class="card-img-top">
+                                <div class="card-body text-center">
                                     <h4><?= $editora['autor_3'] ?></h4>
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
+
+            </div>
         </section>
 
         <section class="d-flex justify-content-center my-5">
-            <div class="card glass w-80 container-custom">
+            <div class="card card-filmes glass w-80 container-custom">
                 <div class="card-header text-center">
                     <h3>Filmes Marcantes</h3>
                 </div>
                 <div class="card-body">
-                    <div class="row justify-content-center filme text-center">
+                    <div class="row justify-content-center filme text-center g-3">
                         <div class="col-auto">
                             <img class="filmes" src="<?= $editora['filme_1'] ?>" alt="">
                         </div>

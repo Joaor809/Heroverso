@@ -177,32 +177,35 @@
             </div>
 
         </section>
-        <div class="row-cols">
+        <section class="inicio-editoras">
+            <div class="row-cols" id="inicio">
             <div class="row justify-content-center g-3">
                 <div class="col-auto">
                     <div class="card" style="width: 18rem;">
-                        <img data-id="3" alt="Marvel Comics" class="card-img-top w-100"
+                        <img src="imagens/index/marvel.jpg" alt="Marvel Comics" class="card-img-top w-100"
                             style="height: 15rem;">
                         <div class="card-body justify-content-center text-center aling-items-center">
                             <h3>O Início de Tudo</h3>
                             <p>Heróis falhos, humanos e próximos da realidade, criados para uma nova geração.</p>
-                            <a href="historia-editoras.php?id=1" class="btn btn-primary">Ler história <i class="bi bi-arrow-right-short"></i></a>
+                            <a href="paginas/historia-editoras.php?id=1" class="btn btn-primary">Ler história <i class="bi bi-arrow-right-short"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-auto">
                     <div class="card" style="width: 18rem;">
-                        <img data-id="4" alt="Marvel Comics" class="card-img-top w-100"
+                        <img src="imagens/index/dc.jpg" alt="Marvel Comics" class="card-img-top w-100"
                             style="height: 15rem;">
                         <div class="card-body justify-content-center text-center aling-items-center">
                             <h3>O Início de Tudo</h3>
                             <p>Heróis falhos, humanos e próximos da realidade, criados para uma nova geração.</p>
-                            <a href="#" class="btn btn-danger">Ler história <i class="bi bi-arrow-right-short"></i></a>
+                            <a href="paginas/historia-editoras.php?id=2" class="btn btn-danger">Ler história <i class="bi bi-arrow-right-short"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        </section>
+        
         <section class="tipos-herois">
             <div class="card" style="width: 80%;">
                 <h3 class="text-center">Tipos de Super-Heróis</h3>
